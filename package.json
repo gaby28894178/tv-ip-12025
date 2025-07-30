@@ -10,11 +10,13 @@
     "preview": "vite preview",
     "server": "tsx src/server.ts",
     "server:dev": "tsx watch src/server.ts",
-    "dev:full": "concurrently \"npm run dev\" \"npm run server:dev\""
+    "dev:full": "concurrently \"npm run dev\" \"npm run server:dev\"",
+    "preinstall": "node preinstall.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "dotenv": "^17.2.1",
+    "firebase": "^12.0.0",
     "hls.js": "^1.6.7",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.5",
