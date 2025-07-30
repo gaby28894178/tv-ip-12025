@@ -30,16 +30,7 @@
       "pais": "Argentina",
       "logo": "/images/channels/canal13-hd.svg"
     },
-    {
-      "id": 5,
-      "nombre": "Aire  Santa Fe",
-      "categoria": "General",
-      "descripcion": "Canal regional de Santa Fe, Argentina.",
-      "url": "https://unlimited1-us.dps.live/airedesantafetv/airedesantafetv.smil/playlist.m3u8",
-      "idioma": "Español",
-      "pais": "Argentina",
-      "logo": "/images/channels/aire-santa-fe.svg"
-    },
+
     {
       "id": 7,
       "nombre": "Argentinísima Satelital",
