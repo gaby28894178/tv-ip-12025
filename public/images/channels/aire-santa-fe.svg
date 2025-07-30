@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="aireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4682B4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="200" height="80" fill="#ffffff" rx="8" stroke="#4682B4" stroke-width="2"/>
+  
+  <!-- Texto AIRE -->
+  <text x="100" y="35" font-family="Arial Black, sans-serif" font-size="18" font-weight="900" 
+        text-anchor="middle" fill="url(#aireGrad)">AIRE</text>
+  
+  <!-- Texto Santa Fe -->
+  <text x="100" y="55" font-family="Arial, sans-serif" font-size="12" font-weight="bold" 
+        text-anchor="middle" fill="#4682B4">SANTA FE</text>
+  
+  <!-- Decoración - ondas de aire -->
+  <path d="M20 40 Q30 35 40 40 T60 40" stroke="url(#aireGrad)" stroke-width="2" fill="none"/>
+  <path d="M140 40 Q150 35 160 40 T180 40" stroke="url(#aireGrad)" stroke-width="2" fill="none"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="canal2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004499;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="200" height="80" fill="#ffffff" rx="8" stroke="#0066CC" stroke-width="2"/>
+  
+  <!-- Texto CANAL -->
+  <text x="100" y="30" font-family="Arial Black, sans-serif" font-size="14" font-weight="900" 
+        text-anchor="middle" fill="#0066CC">CANAL</text>
+  
+  <!-- Número 2 -->
+  <text x="100" y="50" font-family="Arial Black, sans-serif" font-size="24" font-weight="900" 
+        text-anchor="middle" fill="url(#canal2Grad)">2</text>
+  
+  <!-- Texto USHUAIA -->
+  <text x="100" y="65" font-family="Arial, sans-serif" font-size="10" font-weight="bold" 
+        text-anchor="middle" fill="#0066CC">USHUAIA</text>
+  
+  <!-- Decoración -->
+  <rect x="20" y="25" width="15" height="3" fill="url(#canal2Grad)" rx="1"/>
+  <rect x="165" y="25" width="15" height="3" fill="url(#canal2Grad)" rx="1"/>
+</svg>

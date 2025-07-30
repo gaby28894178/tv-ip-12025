@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="beatsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF1744;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF5722;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF9800;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="200" height="80" fill="#1a1a1a" rx="8"/>
+  
+  <!-- Texto BEATS -->
+  <text x="100" y="35" font-family="Arial Black, sans-serif" font-size="18" font-weight="900" 
+        text-anchor="middle" fill="url(#beatsGrad)">BEATS</text>
+  
+  <!-- Texto RADIO -->
+  <text x="100" y="55" font-family="Arial, sans-serif" font-size="12" font-weight="bold" 
+        text-anchor="middle" fill="#ffffff">RADIO</text>
+  
+  <!-- Ondas de sonido -->
+  <path d="M20 30 Q25 25 30 30 Q35 35 40 30" stroke="url(#beatsGrad)" stroke-width="2" fill="none"/>
+  <path d="M20 40 Q25 35 30 40 Q35 45 40 40" stroke="url(#beatsGrad)" stroke-width="2" fill="none"/>
+  <path d="M20 50 Q25 45 30 50 Q35 55 40 50" stroke="url(#beatsGrad)" stroke-width="2" fill="none"/>
+  
+  <path d="M160 30 Q165 25 170 30 Q175 35 180 30" stroke="url(#beatsGrad)" stroke-width="2" fill="none"/>
+  <path d="M160 40 Q165 35 170 40 Q175 45 180 40" stroke="url(#beatsGrad)" stroke-width="2" fill="none"/>
+  <path d="M160 50 Q165 45 170 50 Q175 55 180 50" stroke="url(#beatsGrad)" stroke-width="2" fill="none"/>
+</svg>

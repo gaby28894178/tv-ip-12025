@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="chacoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006400;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="200" height="80" fill="#ffffff" rx="8" stroke="#228B22" stroke-width="2"/>
+  
+  <!-- Texto CHACO -->
+  <text x="100" y="35" font-family="Arial Black, sans-serif" font-size="16" font-weight="900" 
+        text-anchor="middle" fill="url(#chacoGrad)">CHACO</text>
+  
+  <!-- Texto TV -->
+  <text x="100" y="55" font-family="Arial, sans-serif" font-size="14" font-weight="bold" 
+        text-anchor="middle" fill="#228B22">TV</text>
+  
+  <!-- Decoración -->
+  <rect x="20" y="25" width="20" height="3" fill="url(#chacoGrad)" rx="1"/>
+  <rect x="160" y="25" width="20" height="3" fill="url(#chacoGrad)" rx="1"/>
+  <rect x="20" y="52" width="20" height="3" fill="url(#chacoGrad)" rx="1"/>
+  <rect x="160" y="52" width="20" height="3" fill="url(#chacoGrad)" rx="1"/>
+</svg>

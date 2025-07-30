@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+  <defs>
+    <linearGradient id="telefeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0080FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004499;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="100" fill="url(#telefeGradient)" rx="10" ry="10"/>
+  
+  <!-- Telefe text -->
+  <text x="100" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" 
+        text-anchor="middle" fill="white" filter="url(#shadow)">telefe</text>
+  
+  <!-- Subtitle -->
+  <text x="100" y="60" font-family="Arial, sans-serif" font-size="12" 
+        text-anchor="middle" fill="white" opacity="0.9">ARGENTINA</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="25" cy="25" r="4" fill="white" opacity="0.6"/>
+  <circle cx="175" cy="25" r="4" fill="white" opacity="0.6"/>
+  <circle cx="25" cy="75" r="4" fill="white" opacity="0.6"/>
+  <circle cx="175" cy="75" r="4" fill="white" opacity="0.6"/>
+  
+  <!-- Bottom accent line -->
+  <rect x="20" y="85" width="160" height="2" fill="white" opacity="0.7" rx="1"/>
+</svg>

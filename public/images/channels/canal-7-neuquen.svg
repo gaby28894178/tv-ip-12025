@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="80" viewBox="0 0 120 80">
+  <rect width="120" height="80" fill="#9900cc" rx="8"/>
+  <rect x="10" y="10" width="100" height="60" fill="#ffffff" rx="4"/>
+  <text x="60" y="30" text-anchor="middle" fill="#9900cc" font-family="Arial Black" font-size="12" font-weight="bold">CANAL 7</text>
+  <text x="60" y="45" text-anchor="middle" fill="#9900cc" font-family="Arial" font-size="8">NEUQUÉN</text>
+  <circle cx="40" cy="55" r="2" fill="#9900cc"/>
+  <circle cx="60" cy="55" r="2" fill="#9900cc"/>
+  <circle cx="80" cy="55" r="2" fill="#9900cc"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="canal4SJGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="200" height="80" fill="#ffffff" rx="8" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Texto CANAL -->
+  <text x="100" y="30" font-family="Arial Black, sans-serif" font-size="14" font-weight="900" 
+        text-anchor="middle" fill="#8B4513">CANAL</text>
+  
+  <!-- Número 4 -->
+  <text x="100" y="50" font-family="Arial Black, sans-serif" font-size="24" font-weight="900" 
+        text-anchor="middle" fill="url(#canal4SJGrad)">4</text>
+  
+  <!-- Texto SAN JUAN -->
+  <text x="100" y="65" font-family="Arial, sans-serif" font-size="10" font-weight="bold" 
+        text-anchor="middle" fill="#8B4513">SAN JUAN</text>
+  
+  <!-- Decoración montañas -->
+  <polygon points="20,50 30,35 40,50" fill="url(#canal4SJGrad)"/>
+  <polygon points="160,50 170,35 180,50" fill="url(#canal4SJGrad)"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="canal4Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC143C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B22222;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="200" height="80" fill="#ffffff" rx="8" stroke="#DC143C" stroke-width="2"/>
+  
+  <!-- Texto CANAL -->
+  <text x="100" y="30" font-family="Arial Black, sans-serif" font-size="14" font-weight="900" 
+        text-anchor="middle" fill="#DC143C">CANAL</text>
+  
+  <!-- Número 4 -->
+  <text x="100" y="50" font-family="Arial Black, sans-serif" font-size="24" font-weight="900" 
+        text-anchor="middle" fill="url(#canal4Grad)">4</text>
+  
+  <!-- Texto POSADAS -->
+  <text x="100" y="65" font-family="Arial, sans-serif" font-size="10" font-weight="bold" 
+        text-anchor="middle" fill="#DC143C">POSADAS</text>
+  
+  <!-- Decoración -->
+  <rect x="20" y="25" width="15" height="3" fill="url(#canal4Grad)" rx="1"/>
+  <rect x="165" y="25" width="15" height="3" fill="url(#canal4Grad)" rx="1"/>
+</svg>

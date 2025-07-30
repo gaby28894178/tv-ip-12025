@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="canal22Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E55100;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="200" height="80" fill="#1a1a1a" rx="8"/>
+  
+  <!-- Texto CANAL -->
+  <text x="100" y="30" font-family="Arial Black, sans-serif" font-size="14" font-weight="900" 
+        text-anchor="middle" fill="#ffffff">CANAL</text>
+  
+  <!-- Número 22 -->
+  <text x="100" y="55" font-family="Arial Black, sans-serif" font-size="24" font-weight="900" 
+        text-anchor="middle" fill="url(#canal22Grad)">22</text>
+  
+  <!-- Decoración -->
+  <circle cx="30" cy="40" r="2" fill="url(#canal22Grad)"/>
+  <circle cx="170" cy="40" r="2" fill="url(#canal22Grad)"/>
+</svg>

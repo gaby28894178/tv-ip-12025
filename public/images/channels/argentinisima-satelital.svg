@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="argentiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#74ACDF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#74ACDF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="200" height="80" fill="#1a1a1a" rx="8"/>
+  
+  <!-- Texto ARGENTINÍSIMA -->
+  <text x="100" y="30" font-family="Arial Black, sans-serif" font-size="12" font-weight="900" 
+        text-anchor="middle" fill="url(#argentiGrad)">ARGENTINÍSIMA</text>
+  
+  <!-- Texto SATELITAL -->
+  <text x="100" y="50" font-family="Arial, sans-serif" font-size="10" font-weight="bold" 
+        text-anchor="middle" fill="#ffffff">SATELITAL</text>
+  
+  <!-- Estrella -->
+  <polygon points="100,55 102,61 108,61 103,65 105,71 100,68 95,71 97,65 92,61 98,61" 
+           fill="url(#argentiGrad)"/>
+</svg>
