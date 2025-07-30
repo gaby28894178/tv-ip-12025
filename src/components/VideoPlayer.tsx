@@ -77,7 +77,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, onClose }) => {
             capLevelToPlayerSize: true,  // Ajustar calidad al tamaño del player
             testBandwidth: true,         // Probar ancho de banda
             progressive: false,
-            optimizeBufferSize: true,    // Optimizar tamaño de buffer
             
             // Configuración de red
             manifestLoadingTimeOut: 10000,     // 10s timeout para manifest
@@ -112,7 +111,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, onClose }) => {
             console.log('✅ HLS media attached to video element');
           });
 
-          hls.on(Hls.Events.MANIFEST_PARSED, (event, data) => {
+          hls.on(Hls.Events.MANIFEST_PARSED, (_, data) => {
             console.log('✅ HLS manifest parsed successfully', data);
             setIsLoading(false);
             
@@ -129,15 +128,15 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, onClose }) => {
             });
           });
 
-          hls.on(Hls.Events.LEVEL_LOADED, (event, data) => {
+          hls.on(Hls.Events.LEVEL_LOADED, (_, data) => {
             console.log('📺 HLS level loaded:', data.level);
           });
 
-          hls.on(Hls.Events.FRAG_LOADED, (event, data) => {
+          hls.on(Hls.Events.FRAG_LOADED, (_, data) => {
             console.log('🧩 HLS fragment loaded:', data.frag.url);
           });
 
-          hls.on(Hls.Events.ERROR, (event, data) => {
+          hls.on(Hls.Events.ERROR, (_, data) => {
             console.error('❌ HLS error occurred:', {
               type: data.type,
               details: data.details,
