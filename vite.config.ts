@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: './',
   preview: {
     allowedHosts: ['tv-ip-12025.onrender.com']
   },
