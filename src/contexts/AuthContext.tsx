@@ -1,4 +1,13 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { 
+  signInWithEmailAndPassword, 
+  createUserWithEmailAndPassword, 
+  signOut, 
+  onAuthStateChanged,
+  updateProfile,
+  User as FirebaseUser
+} from 'firebase/auth';
+import { auth } from '../firebase';
 
 interface User {
   id: string;
@@ -16,96 +25,81 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const API_BASE_URL = 'http://localhost:3001/api';
+// Demo credentials
+const DEMO_EMAIL = 'demo@tvargentina.com';
+const DEMO_PASSWORD = 'demo123';
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Check for existing token on mount
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      verifyToken(token);
-    } else {
-      setLoading(false);
-    }
-  }, []);
-
-  const verifyToken = async (token: string) => {
-    try {
-      const response = await fetch(`${API_BASE_URL}/auth/profile`, {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        setUser(data.user);
+    const unsubscribe = onAuthStateChanged(auth, (firebaseUser: FirebaseUser | null) => {
+      if (firebaseUser) {
+        setUser({
+          id: firebaseUser.uid,
+          email: firebaseUser.email || '',
+          name: firebaseUser.displayName || firebaseUser.email?.split('@')[0] || 'Usuario'
+        });
       } else {
-        localStorage.removeItem('token');
+        setUser(null);
       }
-    } catch (error) {
-      console.error('Error verifying token:', error);
-      localStorage.removeItem('token');
-    } finally {
       setLoading(false);
-    }
-  };
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   const login = async (email: string, password: string): Promise<void> => {
     try {
-      const response = await fetch(`${API_BASE_URL}/auth/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, password })
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Error en el login');
+      // Check for demo credentials
+      if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {
+        // Create a demo user object
+        setUser({
+          id: 'demo-user',
+          email: DEMO_EMAIL,
+          name: 'Usuario Demo'
+        });
+        return;
       }
 
-      localStorage.setItem('token', data.token);
-      setUser(data.user);
-    } catch (error) {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      // User state will be updated by onAuthStateChanged
+    } catch (error: any) {
       console.error('Login error:', error);
-      throw error;
+      throw new Error(error.message || 'Error en el login');
     }
   };
 
   const register = async (email: string, password: string, name: string): Promise<void> => {
     try {
-      const response = await fetch(`${API_BASE_URL}/auth/register`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, password, name })
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      
+      // Update the user's display name
+      await updateProfile(userCredential.user, {
+        displayName: name
       });
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Error en el registro');
-      }
-
-      localStorage.setItem('token', data.token);
-      setUser(data.user);
-    } catch (error) {
+      // User state will be updated by onAuthStateChanged
+    } catch (error: any) {
       console.error('Register error:', error);
-      throw error;
+      throw new Error(error.message || 'Error en el registro');
     }
   };
 
-  const logout = () => {
-    localStorage.removeItem('token');
-    setUser(null);
+  const logout = async () => {
+    try {
+      // Check if it's demo user
+      if (user?.id === 'demo-user') {
+        setUser(null);
+        return;
+      }
+      
+      await signOut(auth);
+      // User state will be updated by onAuthStateChanged
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
   };
 
   const value = {
