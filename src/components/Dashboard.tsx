@@ -16,7 +16,7 @@ interface Channel {
 }
 
 const Dashboard: React.FC = () => {
-  const { user } = useAuth();
+  const { user: _ } = useAuth();
   const [channels, setChannels] = useState<Channel[]>([]);
   const [filteredChannels, setFilteredChannels] = useState<Channel[]>([]);
   const [selectedChannel, setSelectedChannel] = useState<Channel | null>(null);
