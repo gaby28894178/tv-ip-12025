@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "start": "vite preview --host 0.0.0.0 --port $PORT",
     "server": "tsx src/server.ts",
     "server:dev": "tsx watch src/server.ts",
     "dev:full": "concurrently \"npm run dev\" \"npm run server:dev\""
